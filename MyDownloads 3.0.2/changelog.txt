@@ -1,0 +1,257 @@
+3.0.1 -> 3.0.2
+    * Fixed bug in settings insert for some SQL installations.
+
+3.0 -> 3.0.1
+    * Downloads that cost 0 points now show up as "Download for free"
+	* Fixed bug in searching (sql error) when there were hidden categories
+	* Fixed bug in download history
+	* Added price to the Latest Submissions box and page
+	* Added 'Disapprove Reason' to the Submission Disapprove feature in the ACP
+	* Fixed bug in buttons not displaying on ACP for PHP7
+
+2.8.1 -> 3.0
+	* Setting to allow users to pay only once with NewPoints.
+	* General code improvements
+	* If a download uses NewPoints and PayPal, it shows both buttons now instead of PayPal only.
+	* Pagination in ACP -> MyDownloads -> Reports wouldn't work properly.
+	* Added the possibility of having a background image for the download page table.
+	* Added jQuery Chosen for category selection on front-end.
+	* Several bug fixes.
+	* Tag colors.
+	* Admins can set a pre-defined list of points for downloads.
+	* Admins can edit some fields (name, description, points, price, category, license, version) of the submissions from ACP -> MyDownloads -> Submissions by clicking the 'Modify' button.
+	* Sort downloads by points
+	* Download history on profiles
+
+2.8 -> 2.8.1
+	* Fixed a bug in the tags CSS.
+	* Double sanitizing in ACP (edit download page)
+	* Editing the tags would cause downloads to be bumped.
+	* A download is only bumped if one the following is modified: download file or download url
+	* Prepared for future PayPal security requirements (TLS 1.2)
+	* Added meta tags for browsing category page and view download page.
+	* Removed z-index from tag CSS.
+	* Fixed bug in ACP -> Edit Download -> Tags list would always be empty.
+	* Latest Submissions wouldn't check for the 'hidden' field or 'viewing permissions'
+
+2.7.1 -> 2.8
+	* Fixed a bug in the ACP, which would reset a thumbnail to its full image size when editing a download.
+	* Added tag system.
+	* MyDownloads ACP tab no longer shows up when deactivated.
+	* General improvements to the templates and to the ACP design.
+
+2.7 -> 2.7.1
+	* Users would see the edit comment button even though they had no permission.
+	* Fixes a few template bugs.
+
+2.6 -> 2.7
+	* The 'thumbnail' field would be rendered useless after editing a download.
+	* Fixed bug in the design structure of the download pages.
+	* Added log pruning to ACP.
+	* Added uploaded and last updated dates to View Download page.
+	* Fixed bug which would allow regular users to delete comments.
+	* Added 'Edit Comment' feature.
+	* Users can now edit comments within a period of time after they are posted (Moderators can always edit).
+	* MyAlerts integration: authors are now alerted to new comments made to their downloads.
+
+2.5 -> 2.6
+	* Added Multi-Image uploading to the Manage Previews page (using https://github.com/blueimp/jQuery-File-Upload)
+	* Made some front-end improvements in terms of design.
+	* Fixed a few bugs.
+
+2.5 -> 2.5.1
+	* Preview files must have the following extension: png, jpeg or gif.
+	* Added global setting to enable/disable preview requirement when submitting download.
+	* Fixed bug in latest downloads page.
+	* Fixed bug in preview submission.
+
+2.4 -> 2.5
+	* Fixed some bugs in Manage Previews.
+	* Fixed bug in thumbnails displaying.
+	* Fixed bug in comments deletion (would not decrease counter).
+	* Fixed bug some style attributes.
+	* Added Donate button below download properties (downloads, views, MD5) which is displayed if the Admin has allowed users to enter their PayPal address and the user has left the price 0 but has filled in an e-mail address in the PP field.
+	* Added thumbnails to the statistics boxes.
+	* Added download category name to the index and portal statistics boxes.
+	* Re-styled statistics boxes.
+
+2.3.1 -> 2.4
+	* Users whose group is set to auto approval are now redirected to the Manage Previews page after a download is submitted.
+	* Submit and MySubmissions buttons are now more visible.
+	* Report link moved and converted to button.
+	* Download link converted to button.
+	* Added Edit button to Download page.
+	* Changed "View My Download Submissions" to "View USERNAME's Download Submissions" on profile and postbit
+	* Editing Download Name or Description does not change the 'Last Updated' date.
+	* Added "Latest Submissions" page which lists all downloads submitted so far. Note that these don't go through permissions check (hence why a new setting was added, to enable/disable it). Visiting the downloads, however, goes through permissions checking.
+	* Added a new feature which allows admins to set background image for category rows (one image per category).
+	* Re-styled a few pages.
+	* Fixed some other bugs.
+	* Users can now select the category to which they want to upload (rather than having to browse to it and then clicking Submit).
+	* Users can edit category when editing a download.
+
+2.3 -> 2.3.1
+    * Fixes bug in language loading in ACP when submitting new downloads.
+
+2.2.1 -> 2.3
+    * Added ability to sort items by name, views, rating and number of downloads.
+    * Added three boxes to MyDownloads home and category browsing pages showing the most downloaded items, most rated items and most viewed items (setting).
+    * Allows users to upload multiple preview images.
+    * Re-designed some of the templates.
+    * Added download searching.
+    * Lightbox for previews.
+    * Fixed bug in which it would still be possible to _try_ to rate a download after rating it.
+    * Fixed bug where users could rate their own downloads.
+    * Users can now submit URLs from the front-end (this feature was previously available to admins only) if admins allow (setting).
+    * Fixed bug in PayPal e-mail validation when editing a download.
+    * Fixed several small bugs.
+    * Filenames ouput for downloads changed to: ID_Name_Version.ext (can be disabled via setting)
+    * Editors have WYSIWYG.
+
+2.2 -> 2.2.1
+    * Fixed possible problem that would occur when purchasing item an which doesn't have a unique name.
+    * mydownloads_price_row template wasn't being added on activation.
+    * Fixed bug in submit download.
+
+2.1.6 -> 2.2
+    * Administrators are now able to allow users to enter their PayPal address when submitting downloads.
+    * The payments will be sent to the authors of the downloads.
+
+2.1.5 -> 2.1.6
+    * Fixed an incompatibility problem with MyBB 1.6.6
+    * Fixes an SQL error on some MySQL installations.
+
+2.1.4 -> 2.1.5
+    * Fixed a problem in the categories drop down box that happened when editing a download.
+    * When someone's username is changed, the entries in the downloads table are also updated with the new usernames.
+    * Added quick edit and delete button to item reports.
+
+2.1.3 -> 2.1.4
+    * Fixed wrong category name when browsing a category in certain circumstances.
+    * Fixed missing username in some log entries (only new entries are fixed).
+
+2.1.2 -> 2.1.3
+    * Fixed problem in sub categories listing.
+    * Fixed td background problem in the first points cell when browsing a category.
+
+2.1.1 -> 2.1.2
+    * Fixed invalid download name when paying with PayPal.
+
+2.1 -> 2.1.1
+    * Fixed td background problem.
+    * Fixed points showing price field when editing submission.
+    * Fixed problem where preview and download files would be deleted (if auto approval is enabled for our usergroup) and they're left empty when editing a submission.
+    * Fixed a bug which would let guests report downloads.
+
+2.0 -> 2.1
+    * Fixed bug in submissions shown in postbit.
+    * Re-wrote the entire tree view algorithm (should work perfectly well now...)
+    * When no downloads have been submitted, a message is displayed in the box on portal/index.
+
+1.9.1 -> 2.0
+    * Users can now view their submissions.
+    * Users can now edit their submissions.
+    * Report download link has been added as well as ACP page for reported downloads.
+    * A setting has been added which allows admins to choose to have a box in portal and/or index which shows the latest X downloads.
+    * A setting has been added which allows admin to choose if users can view items that have been updated but are awaiting approval.
+    * Several performance improvements have been made.
+    * Fixed bug in categories tree, which would allow users to put cat parent as the self category.
+    * Optional link in profile for "My Download Submissions".
+    * Optional postbit link for "My Download Submissions".
+    * Fixed XSS security issue in Logs.
+    * Fixed bugs in the Log system.
+    * Images now have a download button like regular files instead of the link "Download Image".
+
+1.9 -> 1.9.1
+    * Tree structure was not working in edit download.
+
+1.8 -> 1.9
+    * Improved performance.
+    * Fixed some minor bugs.
+    * Added "Can download files" option for each category. So you can make a category visible to everyone but downloading may be restrict to some user groups only.
+    * Fixed a problem with uploading files whose size would exceed the PHP ini post_max_size directive - now displays the correct error.
+    * Categories list in Edit/Add download/category pages are now shown in tree structure.
+    * Added a new field which stores the MD5 of files. MD5 is shown on the View Download page.
+    * Added submit date, downloads are not sorted by submit date.
+    * Submit date is shown in each row near the "by USERNAME".
+    * Fixed bug related to the author of the download shown when browsing a category.
+    * Licence and Version are not shown if not set.
+
+1.7 -> 1.8
+    * Fixed a bug in categories' downloads counter after editing a download and changing its category.
+    * Fixed a bug in categories' pagination.
+    * Added more key indexes to increase performance.
+
+1.6 -> 1.7
+    * Fixed a bug in the thumbnails images.
+    * Fixed a bug in the permissions.
+
+1.5 -> 1.6
+    * Fixed minor bugs.
+
+1.4 -> 1.5
+
+    * Recoded a lot of things in /mydownloads.php
+    * Fixed 3 bugs. (one in the pagination in an Admin CP page, one which happens when downloading images and another one regarding an invalid character in file names)
+    * Added two new definitions to /mydownloads.php : PAY_AUTHOR and VALID_GROUPS - please take a look at /mydownloads.php (top of it) for more information.
+    * Points and Price fields (when disabled) are no longer displayed in Submit Download page and in Edit/Add Downloads.
+    * Submissions waiting for approval are now shown in Quick Access sidebar instead of Home sidebar.
+    * Compatible with MyBB 1.6 only.
+
+1.3 -> 1.4
+
+    * Fixed a problem in the PayPal IPN, it seems PayPal has done some changes to the IPN system. It now uses cURL so make sure your host has it installed.
+    * Changes MyPlaza Support to NewPoints.
+
+
+1.2 -> 1.3
+
+    * Fixed a very important bug in the PayPal feature.
+
+
+1.1 -> 1.2
+
+    * Fixed a bug that would display the same author name for each download.
+
+
+1.0 -> 1.1
+
+    * Fixed a bug that would not delete sub categories
+
+
+RC6 -> 1.0 Stable
+
+    * Fixed a few minor issues.
+
+
+RC5 -> RC6
+
+    * Fixed a few minor issues.
+    * Recoded the display download template.
+
+
+RC4 -> RC5
+
+    * Added PayPal support so users can buy downloads with real money.
+    * Fixed some minor issues.
+    * Fixed a bug that would round MyPlaza Turbo points when editing a download.
+
+
+RC3 -> RC4
+
+    * Added a new setting called "Limit of characters in file names", whose description is: "When someone downloads a file, the name of the file will not be longer than the number of characters you insert here. Extensions do not count. (Leave 0 to use a generated file name using the user id and an md5 hash - no limit of characters)"
+    * So when the limit of characters is greater than 0, it will remove some characters (\/:*?"<>|) from the download name (not the download file name but the download name!) and just use the number of characters set in settings.
+
+
+RC2 -> RC3
+
+    * Fixed a bug (introduced in RC2) that would pormpt the users to download mydownloads.php instead of the download file. This happened only with non-image files.
+    * Increased security: a new name of the downloaded file is generated before the user is prompted to download it. This prevents the user from knowing the name of the file hosted in your server.
+
+
+RC1 -> RC2
+
+    * New setting: Auto approve downloads submitted by certain usergroups
+    * New setting: Percentage of the cost the download author gets
+    * Fixed a few minor bugs and a security risk (same as MyBB from 1.4.7 to 1.4.8 in attachments.php)
+    * Replaced _blank with _self like Seeker requested

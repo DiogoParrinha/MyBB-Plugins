@@ -1,0 +1,3 @@
+1.1
+- It was possible to enter a negative amount of points.
+- It would be possible to steal without having the necessary points

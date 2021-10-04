@@ -1,0 +1,18 @@
+2.1
+* Adds MyBB 1.8 compatibility.
+
+2.0
+* Added page to ModCP with the following features:
+   * Sort by username (asc|desc)
+   * Sort by download date (asc|desc)
+   * Filter by attachment ID
+   * Filter by attachment name (search by name)
+   * Filter by primary usergroup
+   * Filter by user ID
+* Setting to allow certain groups to access it.
+* Setting to exclude attachments from ModCP logs.
+* Setting to exclude usergroups from ModCP logs.
+
+1.1
+* Changed license to GPLv3.
+* Added compatibility with MyBB 1.6.

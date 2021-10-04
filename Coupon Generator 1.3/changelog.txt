@@ -1,0 +1,9 @@
+1.3
+ * Added compatibility with MyBB 1.8.
+
+1.2
+ * Fixed a bug related to wins limits and waiting time.
+
+1.1
+ * Changed license to GPLv3.
+ * Compatible with MyBB 1.6 only.

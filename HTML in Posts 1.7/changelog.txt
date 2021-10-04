@@ -1,0 +1,23 @@
+ v1.7
+* Fixed bug where HTML would not show in portal.
+* Fixed bug where HTML would not show in thread review within the new reply page.
+
+ v1.6
+* Added MyBB 1.8 compatibility.
+* Fixed bug in UID override.
+
+ v1.5
+* Fixes a problem with previews (again), this time the only fix is not parsing HTML at all in case the user does not have Admin CP access - that's due to MyBB's code. (I may write a better workaround in a later release)
+
+ v1.4
+* Fixed a problem with HTML in signatures being parsed.
+* Fixed a problem with HTML not being parsed in post previews.
+
+ v1.3
+* Re-wrote again.
+
+ v1.2
+* Re-wrote the entire thing but uses MyBB's parser now so it should be bug free from now on (unless I messed up permissions somewhere but I don't think so).
+
+ v1.1
+* Fixed comments bug. HTML comments would show up as text instead of being hidden in the source of the page.

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- start: index -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<title>Readme - Purchase Credits</title>
+<!-- start: headerinclude -->
+<link href="Readme_files/css.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<link type="text/css" rel="stylesheet" href="Readme_files/custom.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/global.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/css3.css">
+</head>
+<body>
+<!-- start: header -->
+<a name="top" id="top"></a>
+<div id="userbar">
+	<div class="wrapper">
+      	<div class="toplinks">
+        	<ul>
+              	<li id="forums"><a href="#description">Description</a></li>
+              	<li id="search"><a href="#install">Install</a></li>
+              	<li id="search"><a href="#upgrade">Upgrade</a></li>
+              	<li id="search"><a href="#instructions">Instructions</a></li>
+              	<li id="search"><a href="#support">Support</a></li>
+          	</ul>
+      	</div>
+  	</div>
+</div>
+<div class="header">
+    <div class="logo">
+        <div class="wrapper">
+            <a href="#"><img src="Readme_files/logo.png" alt="Forums" title="Forums"></a>
+          	<br class="clear">
+        </div>
+    </div>
+</div>
+<br />
+<div id="container">
+	<div id="content">
+		<div class="wrapper">
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="description">Description</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<h2>Purchase Credits</h2>
+						<p>Purchase Credits allows board administrators to setup points packages on their <a href="http://mybb.com" target="_blank"/>MyBB</a> forum to be purchased by users.</p>
+						<p>Features:
+						<ul>
+						<li>Multiple packages.</li>
+						<li>Payment types: PayPal, Payza (previously known as AlertPay) and CoinPayments</li>
+						<li>Logs all payments.</li>
+						</ul>
+						</p>
+
+						<p>Payments logs can be viewed on ACP -> NewPoints -> Packages -> PayPal Logs, Payza Logs or CoinPayments Logs.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="install">Install</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>Simply upload the contents of the &quot;Upload&quot; folder to the root of your MyBB installation.</p>
+						<p>Make sure to edit the settings for Purchase Credits!</p>
+						<p>The PayPal account should have Instant Paypal Notifcations enabled - please refer to the PayPal documents for more information on this matter.</p>
+						<p>For Payza payments, you must enter your IPN Secret Code in line 36, file credits_payza.php</p>
+						<p>For CoinPayments payments, you must enter your IPN Secret Code in line 29, file credits_coinpayments.php</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="upgrade">Upgrade</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+                    <tr>
+    					<td class="trow2">
+    						<p><strong>Upgrading from 2.0 to 2.0.1:</strong></p>
+    						<p>Overwrite all files.</p>
+    					</td>
+    				</tr>
+    				<tr>
+    					<td class="trow2">
+    						<p><strong>Upgrading from 1.0/1.1/1.2 /1.2.1 to 2.0.1:</strong></p>
+    						<p>Overwrite all files.</p>
+    						<p>Upload the upgrade20.php file to the root of your forum installation and run it from your browser. Delete it afterwards.</p>
+    						<p>Deactivate the plugin and activate it back (do not re-install!).</p>
+    					</td>
+    				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="instructions">Instructions</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>The Purchase Credits page in your ACP can be found in ACP -> NewPoints -> Packages.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="support">Support</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>This plugin is NOT maintained and NO support is officially given by the author. Use at your own RISK.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<br />
+<div id="footer">
+	<div class="wrapper">
+    	<div class="copyright">
+          	Copyright © 2017 Diogo Parrinha<br />
+          	All rights reserved.<br />
+      	</div>
+      	<br class="clear">
+  	</div>
+</div>
+</body></html>

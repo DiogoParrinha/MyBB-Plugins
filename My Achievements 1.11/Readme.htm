@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- start: index -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<title>Readme - MyAchievements</title>
+<!-- start: headerinclude -->
+<link href="Readme_files/css.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<link type="text/css" rel="stylesheet" href="Readme_files/custom.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/global.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/css3.css">
+</head>
+<body>
+<!-- start: header -->
+<a name="top" id="top"></a>
+<div id="userbar">
+	<div class="wrapper">
+      	<div class="toplinks">
+        	<ul>
+              	<li id="forums"><a href="#description">Description</a></li>
+              	<li id="search"><a href="#install">Install</a></li>
+              	<li id="search"><a href="#upgrade">Upgrade</a></li>
+              	<li id="search"><a href="#instructions">Instructions</a></li>
+              	<li id="search"><a href="#support">Support</a></li>
+          	</ul>
+      	</div>
+  	</div>
+</div>
+<div class="header">
+    <div class="logo">
+        <div class="wrapper">
+            <a href="#"><img src="Readme_files/logo.png" alt="Forums" title="Forums"></a>
+          	<br class="clear">
+        </div>
+    </div>
+</div>
+<br />
+<div id="container">
+	<div id="content">
+		<div class="wrapper">
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="description">Description</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<h2>MyAchievements</h2>
+						<p>My Achievements lets you setup various types of achievements that motivate your members to be more active.</p>
+						<p>Setup ranks according to achievements and users will definitely do their best to upgrade their rank.</p>
+						<p>There are five types of achievements:
+						<ul>
+						<li>Post Count: achievements gained by reaching a certain post number.</li>
+						<li>Thread Count: achievements gained by reaching a certain thread number.</li>
+						<li>Activity: achievements gained by being a certain amount of time online.</li>
+						<li>Custom: achievements given by administrators (similar to awards).</li>
+						<li>Points: achievements gained by being reaching a certain amount of NewPoints points. (required: NewPoints must be activated, thus this feature is optional)</li>
+						</ul>
+						</p>
+						<p>Based on the achievements collected, it is possible to get the rank upgraded, however the administrator must have setup ranks already:
+						<ul>
+						<li>In order to setup a rank you need to have created at least one achievement.</li>
+						<li>You can setup ranks by going to Admin Panel -> My Achievements tab -> Ranks on the side bar -> Add</li>
+						</ul>
+						</p>
+						<p>&nbsp;</p>
+						<p>Here's how the rank upgrading process works:
+						<ul>
+						<li>The task checks if users have reached certain conditions to receive certain achievements. If a user achieves something, it checks if the rank should be upgraded.</li>
+						<li>Each time an administrator gives a custom achievement, My Achievements checks if there is a rank which depends on that custom achievement and if there is, it upgrades the user's rank.</li>
+						</ul>
+						<p>&nbsp;</p>
+						<p><strong>You should always setup a rank with level 0 and no achievement requirements for users that have no achievements.</strong></p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="install">Install</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>1. Upload the contents of the Upload folder to the root of your MyBB installation.</p>
+						<p>2. Go to the Admin Panel and install "My Achievements".</p>
+						<p>3. Without quiting the Admin Panel, go to Tools & Maintenance -> Tasks and Enable the My Achievements task.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="upgrade">Upgrade</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p><strong>From 1.8.3/1.8.4/1.8.5/1.9/1.10 to 1.11:</strong></p>
+						<p>1. Upload the contents of the Upload folder to the root of your MyBB installation overwriting the existing files.</p>
+						<p>&nbsp;</p>			
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="instructions">Instructions</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+							<p><strong>Template Edits</strong></p>
+							<p>My Achievements does not add an icon/link to the header of your board.</p>
+							<p>In order for your members to use the My Achievements page you'll need to do it.</p>
+							<p>The link is the following: www.yourwebsite.com/myachievements.php</p>
+							<p>&nbsp;</p>
+							<p>My Achievements does not add link on installation because themes vary and most of the themes would not be edited.</p>
+							<p>Make sure the template 'usercp_nav_misc' has been edited and contains the following: {myachievements_nav} - if not, please contact support.</p>
+							<p>&nbsp;</p>
+							<p><strong>Achievements on Profile/Postbit</strong></p>
+							<p>You can show your achievements and rank on your profile and postbit.</p>
+							<p>To do it, go to Settings and choose My Achievements.</p>
+							<p>Enter number of achievements you want to show on profile/postbit in the profile and postbit settings.</p>
+							<p>&nbsp;</p>
+							<p>Note: if you set the profile achievements to 0, it will still show the rank of the user (if any).</p>
+							<p>&nbsp;</p>
+							<p><strong>Rebuild Achievements and Ranks</strong></p>
+							<p>Ranks can be confusing if you don't set them up correctly.</p>
+							<p>In order to fix this issue, My Achievements comes with a Rebuild function that will reset everyone's rank and achievements.</p>
+							<p>The task will then be run and will re-add achievements and ranks properly.</p>
+							<p>&nbsp;</p>
+							<p>This feature is necessary in case you change the level of a rank for example.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="support">Support</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>This plugin is NOT maintained and NO support is officially given by the author. Use at your own RISK.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<br />
+<div id="footer">
+	<div class="wrapper">
+    	<div class="copyright">
+          	Copyright © 2021 Diogo Parrinha<br />
+          	All rights reserved.<br />
+      	</div>
+      	<br class="clear">
+  	</div>
+</div>
+</body></html>

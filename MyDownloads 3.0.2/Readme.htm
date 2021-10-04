@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- start: index -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<title>Readme - MyDownloads</title>
+<!-- start: headerinclude -->
+<link href="Readme_files/css.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<link type="text/css" rel="stylesheet" href="Readme_files/custom.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/global.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/css3.css">
+</head>
+<body>
+<!-- start: header -->
+<a name="top" id="top"></a>
+<div id="userbar">
+	<div class="wrapper">
+      	<div class="toplinks">
+        	<ul>
+              	<li id="description"><a href="#description">Description</a></li>
+              	<li id="install"><a href="#install">Install</a></li>
+              	<li id="upgrade"><a href="#upgrade">Upgrade</a></li>
+              	<li id="instructions"><a href="#instructions">Instructions</a></li>
+              	<li id="support"><a href="#support">Support</a></li>
+          	</ul>
+      	</div>
+  	</div>
+</div>
+<div class="header">
+    <div class="logo">
+        <div class="wrapper">
+            <a href="#"><img src="Readme_files/logo.png" alt="Forums" title="Forums"></a>
+          	<br class="clear">
+        </div>
+    </div>
+</div>
+<br />
+<div id="container">
+	<div id="content">
+		<div class="wrapper">
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="description">Description</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<h2>MyDownloads</h2>
+						<p><strong>Features:</strong></p>
+						<ul>
+							<li>AdminCP
+								<ul>
+									<li>Lots of settings, which allow you customize plenty of features.</li>
+									<li>Manage categories and downloads
+										<ul>
+											<li>Many sub-category levels</li>
+											<li>Permissions to view, download and submit items</li>
+										</ul>
+									</li>
+									<li>Logs (ratings, downloads and comments)</li>
+									<li>Submissions - downloads that have been submitted by users and are awaiting approval</li>
+									<li>PayPal Logs - payment logs</li>
+									<li>Reported Items</li>
+									<li>Tags</li>
+								</ul>
+							</li>
+							<li>Font End
+								<ul>
+									<li>(Optional) Most recent downloads box on index and portal</li>
+									<li>Home page with stats: most downloaded, most viewed, most rated</li>
+									<li>Many sub-category levels</li>
+									<li>Users can submit their own downloads (either file or download links)</li>
+									<li>Users can submit their own downloads</li>
+									<li>Users can comment downloads</li>
+									<li>Users can rate downloads</li>
+									<li>Download authors can upload (through drag and drop) multiple previews for their downloads and can set one as cover</li>
+									<li>Users can manage their submissions (edit and delete)</li>
+									<li>Users can report downloads.</li>
+									<li>Supports PayPal and NewPoints.</li>
+									<li>Users can search downloads in all categories or specific categories.</li>
+									<li>Users can associate tags with their downloads and filter downloads by tags.</li>
+								</ul>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="install">Install</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<h3>Upload Files</h3>
+						<p>Simply upload the contents of the &quot;Upload&quot; folder to the root of your MyBB installation.</p>
+
+						<h3>Configuration & File Permissions</h3>
+						<p>Then, activate MyDownloads from the Administrator Panel and chmod the downloads directory (by default is ROOT/mydownloads/downloads) as well as the previews directory  (by default is ROOT/mydownloads/previews) to 777. You can change the downloads and previews directory by changing the settings.</p>
+
+						<h3>Template Edits</h3>
+						<p>You may require to add {$mydownloads} to your index template, right before {$forums} as well as in the portal template right after {$pms}.</p>
+						<p>You also require to place a link to www.yoursite.com/mydownloads.php somewhere in the header template so users know where the downloads page is.</p>
+						<p>In addition to these, you may need to add {$mydownloads_reports} in the 'global' template right after {$unreadreports}.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="upgrade">Upgrade</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p><strong>Upgrading from 3.0/3.0.1 to 3.0.2:</strong></p>
+						<p>Upload all files, overwriting exiting ones.</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="trow2">
+						<p><strong>Upgrading from 2.8.1 to 3.0:</strong></p>
+						<p>Upload all files, overwriting exiting ones.</p>
+						<p>Deactivate (NOT UNINSTALL) and Activate the plugin back.</p>
+						<p>Upload upgrade script upgrade30.php to your forum root. Run it.</p>
+						<p>DELETE IT now.</p>
+						<br /><br />
+
+						<p>For older versions, please download the 2.8.1 ZIP from the release thread.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="instructions">Instructions</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p><strong>Manage categories/downloads</strong></p>
+						<p>Create category: Admin CP -&gt; MyDownloads tab. Click Create category if you want to create a main category; If you want to create a sub category, browse an existing category and then click Create Category.</p>
+						<p>Add download: Admin CP -&gt; MyDownloads tab. Browse the category (by clicking the category name) where you want the download to be in and then click Add download.</p>
+						<p><strong>PayPal</strong></p>
+						<p>In order to use the PayPal feature, you must do the following:
+						<ul>
+						<li>Go to the settings page and click MyDownloads.</li>
+						<li>Enable PayPal.</li>
+						<li>Enter your PayPal email address.</li>
+						<li>Select the currency you want to use.</li>
+						<li>You can choose if users may enter their PayPal email to get the money or if you want the money to go into your account.</li>
+						</ul>
+						</p>
+						<p><strong>NewPoints</strong></p>
+						<p>You can make it so users pay points to download by enabling the NewPoints compatibility setting. Make sure NewPoints is installed, otherwise it will not work.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="support">Support</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>This plugin is NOT maintained and NO support is officially given by the author. Use at your own RISK.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<br />
+<div id="footer">
+	<div class="wrapper">
+    	<div class="copyright">
+          	Copyright © 2021 Diogo Parrinha<br />
+          	All rights reserved.<br />
+      	</div>
+      	<br class="clear">
+  	</div>
+</div>
+</body></html>

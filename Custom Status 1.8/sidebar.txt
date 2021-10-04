@@ -1,0 +1,14 @@
+HOW TO PUT THE TABLE ON THE RIGHT OF THE FORUMS
+Replace {$forums} with: (index template)
+<table width="100%" border="0" align="center">
+<tr>
+<td valign="top" width="70%">
+{$forums}
+</td>
+<td valign="top" width="30%">
+{$custom_status_index}
+</td>
+</tr>
+</table>
+
+Don't forget to delete the existing {$custom_status_index}!

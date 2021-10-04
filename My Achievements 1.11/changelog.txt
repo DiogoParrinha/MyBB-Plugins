@@ -1,0 +1,60 @@
+1.11
+- PHP7 compatibility.
+
+1.10
+- Works fine with MySQL STRICT enabled.
+
+1.9
+- Added compatibility with MyBB 1.8.
+- Rebuild tool now comes with an option to disable custom achievements reset.
+- The task now converts old achivements setup to new one added in v1.7. (before we'd only maintain compatibility, now we convert to newer method)
+- Fixed bug in the task which would not use custom achievements in rank requirements.
+
+1.8.5
+- Fixed two minor bugs.
+
+1.8.4
+- Fixed filtering pagination bug.
+
+1.8.3
+- Added a setting which allows only to show custom achievements in the User CP.
+- Added filters to the log page.
+
+1.8.2
+- All templates are now cached.
+
+1.8.1
+- Fixed an incompatibility issue with MyBB 1.6.6
+
+1.8
+- Fixed a typo in a language file.
+- Fixed a bug that would "destroy" achievements when giving out a custom achievement to someone (this could be fixed by rebuilding).
+
+1.7
+- Users can now choose which achievements are displayed on profile and postbit.
+- Improved performance on profile.
+
+1.6
+- Added "My Stats" to the menu in the MyAchievements page.
+
+1.5
+- Removed debug code I forgot in the task. (not a problem but it would end up filling the logs table with useless entries)
+- Fixed some minor issues in Custom achievements.
+- It is now possible to revoke an achievement given to someone. (added a new tab in the Custom Achievements page named Revoke)
+
+1.4
+- Fixed a problem in the task, it would increase ranks even if they required points achievements that users didn't have.
+
+1.3
+- Now detects collation when creating tables.
+- Changed license.
+
+1.2
+- Added compatibility with MyBB 1.6.
+- Now caches attachments in show thread - performance increase.
+
+1.1
+- Fixed bug in custom achievements - they would not be given correctly.
+- Added a full rebuild option to the rebuild page.
+- Quotes and Double quotes can no longer be used in ranks/achievements names and custom achievements reason. (unserialize() does not like extra quotes)
+- Fixed a few language typos.

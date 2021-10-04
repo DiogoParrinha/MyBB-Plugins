@@ -1,0 +1,6 @@
+1.2
+- Added Compatibility with MyBB 1.8
+
+1.1
+- Added Compatibility with MyBB 1.6
+- Changed license to GPLv3

@@ -1,0 +1,27 @@
+1.2.2
+- Fix SQL error when viewing active subscriptions page with no subscriptions.
+- Fixed PHP7 compatibility.
+
+1.2.1
+- Added "enabled" field which allows admins to turn on or off subscription plans.
+- Renewals were not charging points.
+- Added compatibility with NewPoints 2.0
+
+1.2
+- Fixed a bug that would not remove template newpoints_subscriptions_empty when deactivating/uninstalling.
+- Users can now see their subscriptions from "My Subscriptions" page (the link can be found in the Subscriptions page -> right corner of the listings table)
+- Subscriptions can now be set for auto renewal.
+- Subscriptions are sorted by price
+- Primary and Additional subscriptions are now displayed in two different tables.
+
+1.1.2
+The bug was not entirely fixed in 1.1.1
+
+1.1.1
+Fixed an important bug that would not let additional subscriptions expire. IMPORTANT: Every additional usergroup subscription that has expired must be checked. Users must be moved from that additional usergroup manually.
+
+1.1
+Fixed a bug that would show the user group name instead of the period.
+
+1.0
+Initial Release

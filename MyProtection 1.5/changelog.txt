@@ -1,0 +1,15 @@
+1.5 
+- Added MyBB 1.8 compatibility.
+
+1.4
+- Additional groups are now checked.
+
+1.3
+- Added compatibility with MyBB 1.6.
+- Changed license to GPLv3.
+
+1.2
+- MyProtection checks if the user id's defined in MP_ADMINS_UIDS exist in your database.
+
+1.1
+- Fixed a typo that would generate a MySQL error when deactivating the plugin

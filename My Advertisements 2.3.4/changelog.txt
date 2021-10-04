@@ -1,0 +1,88 @@
+ * 2.3.4
+- Fixed issue with MySQL STRICT.
+
+ * 2.3.3
+- Fixed typo with continue statement.
+
+ * 2.3.2
+- Disable ads on error pages.
+
+ * 2.3.1
+- Fixed PHP parsing warning on PHP7 (radio options)
+
+ * 2.3
+- Views and clicks are now formated properly
+- Fixed bug in the send PM feature of the task: would only send PM to uid 1
+- Expired ads show in a new tab now
+- Clicks and views are now sent to the advertiser when the e-mail notice is sent if using {stats}
+
+ * 2.2
+- Adds a feature which allows you to send e-mail notices when an advertisement will expire (10 days before expiring)
+- Adds a 'creation date' column (which will show N/A for ads created before the upgrade)
+
+ * 2.1.2
+- Fixes a bug with the postbit zone.
+
+ * 2.1.1
+- Fixes compatibility issue with First Post Only plugin.
+
+ * 2.1
+- Added compatibility with MyBB 1.8.
+
+ * 2.0.3
+Uses one less query per post (only runs once per thread view instead of per post post).
+Added an option to enable or desable the "query / advertisement" on postbit, please read comments above the following line found at the top of /inc/plugins/myadvertisements.php: define("MYADS_DIF_POST", 0);
+
+ * 2.0.2
+Compatibility fix with other plugins.
+
+ * 2.0.1
+Fixed problem in exempt groups added in 2.0
+
+ * 2.0
+Added an option to disable advertisements.
+Fixed a bug that would allow users to increase clicks without actually clicking.
+
+ * 1.9.2
+Fixed JavaScript warning, thanks to http://community.mybb.com/user-37662.html
+
+ * 1.9.1
+Fully compatible with XThreads now: http://mybbhacks.zingaburga.com/showthread.php?tid=572&pid=5133#pid5133
+
+ * 1.9
+Fixed a bug in the postbit zone that was not entirely fixed in 1.8. (I hope this plugin is bug free now!)
+
+ * 1.8
+Fixed a bug introduced in 1.7, regarding the postbit advertisements.
+Fixed a bug in post previews, PM's and announcements where the postbit zone code would be shown.
+
+ * 1.7
+Fixed a bug in templates caching - would make it incompatible with XThreads for example. (I was being stupid for some reason while writing it in the past)
+
+ * 1.6
+Fixed a minor bug in zones codes.
+Changed license to GPLv3.
+Changed compatibility to MyBB 1.6 only.
+Improved performance - now uses taks to check for expired ads.
+
+ * 1.5
+Fixed SQL error in delete advertisement action.
+
+ * 1.4
+Fixed a bug in two postbit modes. They all work perfectly now.
+
+ * 1.3
+Fixed a bug that would cause a MySQL error when deleting an advertisement. (the advertisement would still be deleted but the ad count of its zone wouldn't be updated)
+
+ * 1.2
+Fixed a bug in the postbit zone.
+
+ * 1.1
+Comes with 3 zones by default (can't be deleted): header, footer, postbit
+PostBit zone has a display mode, you can choose between these four:
+ - Each Post
+ - First Post only
+ - First Post and every X posts
+ - Every X posts
+
+Fixed a bug in the unlimited time ads.

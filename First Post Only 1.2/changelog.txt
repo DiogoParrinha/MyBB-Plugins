@@ -1,0 +1,5 @@
+1.2
+* Adds MyBB 1.8 compatibility.
+
+1.1
+* No longer possible to view the replies on archive and print thread.

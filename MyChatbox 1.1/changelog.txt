@@ -1,0 +1,8 @@
+1.2
+- PHP7 compatible
+
+1.1
+- Usernames are now formatted according to their display group.
+- MyChatbox is now collapsible.
+- {mychatbox} would display for those without permissions to view it. The placeholder no longer shows.
+- Those with MySQL STRICT mode setups would have a hard time installing the plugin.

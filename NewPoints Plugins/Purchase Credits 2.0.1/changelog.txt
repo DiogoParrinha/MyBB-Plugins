@@ -1,0 +1,18 @@
+2.0.1
+- Fix bug in checkbox for CoinPayments which would always show up ticked in the ACP
+
+2.0
+- Payment types can now be assigned to individual packages.
+- Supports CoinPayments
+- Added new currencies (including BTC)
+- Fixed minor bugs (mostly text related)
+
+1.2.1
+- Fixed bug where Submit buttons wouldn't display.
+
+1.2
+- PayPal compliance changes.
+
+1.1
+- Compatible with NewPoints 2.0.
+- GPB was supposed to be GBP.

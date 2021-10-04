@@ -1,0 +1,27 @@
+1.4.2
+- Changed enum in payment_type column to varchar(255)
+
+1.4.1
+- PHP7 compatibility
+
+1.4
+- Ability to add Guests from the Manual Donation form in ACP.
+- Ability to hide manual donations from the official list.
+- Solved issues with MySQL STRICT
+
+1.3
+- Added a Manual Donation form to the ACP.
+- IPN handler now compliant with future PayPal TLS changes.
+- Fixed a few minor bugs and added some minor improvements.
+
+1.2
+- Fixed duplicated PayPal button bug.
+
+1.1
+- Added a new setting which allows admins to at certain pre-defined amounts to be donated, rather than a custom amount.
+- Usernames are now properly formatted in the donnors list.
+
+1.0
+- This was previously known as Donation Bar. It's called MyDonations now.
+- Added a setting to enable/disable the donation bar on the index page.
+- Added a new page (/mydonations.php) which shows the donation bar along with the donate button.

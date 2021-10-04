@@ -1,0 +1,53 @@
+* 1.9.4
+- Add new hooks for easy integration.
+
+* 1.9.3
+- Fixed bug which would override icon upon item editing if no icon was set.
+
+* 1.9.2
+- Fixed expandable categories issue.
+
+* 1.9.1
+- Fixed a problem with the DECIMAL fields.
+
+ * 1.9
+- Added confirm window for buying items.
+- Fixed problem with MySQL STRICT
+- Added a new field for PM to be sent to admins.
+- Added two new settings for default PM content.
+- Fixed items_rate field bug (was 3,3 previously)
+
+ * 1.8
+Added compatibility with NewPoints 2.x
+
+ * v1.7
+Admins can now set a limit to the number of items of each type, one user can buy (individual setting for each item).
+Admins can now edit the inventory of users by going to the user's profile and clicking "Edit Inventory".
+
+ * v1.6
+Users can no longer send items to themselves.
+Fixed a minor template problem.
+Fixed a bug related to group rules and price rating.
+Fixed an error in some MySQL installations.
+
+ * v1.5
+Fixed a missing </td> in template newpoints_shop_view_item
+Fixed a low security hole (XSS attack) in the ACP that would be open when deleting a category and an item.
+
+ * v1.4
+Fixed problem in postbit items.
+
+ * v1.3
+Fixed a small problem in the private message sent to the user whenever someone sends an item. (username was wrong)
+
+ * v1.2
+Added compatibility with NewPoints 1.5
+
+ * v1.1
+Changed a few things in the templates to make it look better.
+Fixed several bugs.
+Added "Items on Postbit"
+Added "PM Items" which allow admins to set a private message to be sent to the buyer of the item whenever the item is bought.
+
+ * v1.0
+Initial release

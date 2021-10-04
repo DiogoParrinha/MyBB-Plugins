@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- start: index -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<title>Readme - MyProtection</title>
+<!-- start: headerinclude -->
+<link href="Readme_files/css.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<link type="text/css" rel="stylesheet" href="Readme_files/custom.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/global.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/css3.css">
+</head>
+<body>
+<!-- start: header -->
+<a name="top" id="top"></a>
+<div id="userbar">
+	<div class="wrapper">
+      	<div class="toplinks">
+        	<ul>
+              	<li id="forums"><a href="#description">Description</a></li>
+              	<li id="search"><a href="#install">Install</a></li>
+              	<li id="search"><a href="#upgrade">Upgrade</a></li>
+              	<li id="search"><a href="#support">Support</a></li>
+          	</ul>
+      	</div>
+  	</div>
+</div>
+<div class="header">
+    <div class="logo">
+        <div class="wrapper">
+            <a href="#"><img src="Readme_files/logo.png" alt="Forums" title="Forums"></a>
+          	<br class="clear">
+        </div>
+    </div>
+</div>
+<br />
+<div id="container">
+	<div id="content">
+		<div class="wrapper">
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="description">Description</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p><strong>MyProtection</strong></p>
+						<p>This plugin enhances your forum security and prevents data loss.</p>
+						<p>You should <strong>never</strong> tell anyone that you have it installed as the plugin outputs a fake 404 page when a user tries to access the plugin file directly.</p>
+						<p>&nbsp;</p>
+						<p>Open up inc/plugins/myprotection.php</p>
+						<p>And find this:</p>
+						<p><div class="codeblock"><code>
+						define('MP_EMAIL', 'myemail@mail.com'); // change this to your email<br />
+						define('MP_ADMIN_UID', 1); // change this to your admin user id (usually super admin)<br />
+						define('MP_ADMINS_UIDS', '1'); // uid's of all admins on your forum seperated by a comma, for example: '1,3,5'<br />
+						define('MP_EMAIL_DELAY', 600); // delay in seconds between emails are sent - 600 seconds by default = 10 minutes<br />
+						define('MP_BLOCK_BOARD', 1); // set to 1 if you want MyProtection to immediatly block the usage of the forums once something wrong is found (recommended value: 1)<br />
+						</code></div></p>
+						<p>Do what the comments (what is after // ) say.</p>
+						<p>&nbsp;</p>
+						<p>MyProection checks the following on each page load:
+						<ul>
+							<li>If MP_ADMIN_UID exists
+								<ul>
+									<li>If it doesn't, MP_EMAIL is emailed automatically and a backup of the database is made to admin/myprotection/backups - make sure it is chmod'd to 777</li>
+								</ul>
+							</li>
+							<li>If each administrator was defined in MP_ADMINS_UIDS
+								<ul>
+									<li>If it finds one that wasn't, MP_EMAIL is emailed automatically and a backup of the database is made to admin/myprotection/backups - make sure it is chmod'd to 777</li>
+								</ul>
+							</li>
+							<li>If the number of user id's set in MP_ADMINS_UIDS matches the number of administrators
+								<ul>
+									<li>If the number doesn't match, MP_EMAIL is emailed automatically and a backup of the database is made to admin/myprotection/backups - make sure it is chmod'd to 777</li>
+								</ul>
+							</li>
+							<li>If there are any admins
+								<ul>
+									<li>If there no admins were found, MP_EMAIL is emailed automatically and a backup of the database is made to admin/myprotection/backups - make sure it is chmod'd to 777</li>
+								</ul>
+							</li>
+							<li>If the uid's set in MP_ADMINS_UIDS exist in your database
+								<ul>
+									<li>If at least one of them doesn't, MP_EMAIL is emailed automatically and a backup of the database is made to admin/myprotection/backups - make sure it is chmod'd to 777</li>
+								</ul>
+							</li>
+						</ul>
+						</p>
+						<p>&nbsp;</p>
+						<p>If anything of the above failed and if MP_BLOCK_BOARD is set to 1, the board is automatically closed (not the usual way) blocking the usage to everyone, including admins, displaying this message:</p>
+						<p><blockquote>
+						I'm sorry, but you can't use this board until the administrator fixes the problem.<br />
+						</blockquote>
+						</p>
+						<p>&nbsp;</p>
+						<p>This MP_EMAIL_DELAY is used to set a delay between emails / checks once something wrong was found. By default it is set to 10 minutes (600 seconds).</p>
+						<p>If something wrong is found, every 600 seconds (by default) it checks everything again to check if the administrator has fixed the problem(s) already.</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p><h3>In case you want to fix the board and you don't know how</h3></p>
+						<p><p>- Set MP_BLOCK_BOARD to 0 and make the necessary changes to your board - close it immediately!</p>
+						<p><p>- If something is missing (like posts, private messages, threads, etc), you can try to fix it by importing one of the backups made to admin/myprotection/backups</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="install">Install</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>Upload contents of the Upload folder to the root of your MyBB installation.</p>
+						<p>Go to Admin CP -> Configuration -> Plugins and Activate "MyProtection"</p>
+						<p>Then go to Settings -> MyProtection and change anything you need.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="upgrade">Upgrade</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p><strong>From 1.0/1.1/1.2/1.3 to 1.4:</strong></p>
+						<ul>
+							<li>Upload contents of the Upload folder to the root of your MyBB installation, overwriting existing files.</li>
+							<li>Configure the inc/plugins/myprotection.php file again.</li>
+						</ul>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="support">Support</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>This plugin is NOT maintained and NO support is officially given by the author. Use at your own RISK.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<br />
+<div id="footer">
+	<div class="wrapper">
+    	<div class="copyright">
+          	Copyright © 2021 Diogo Parrinha<br />
+          	All rights reserved.<br />
+      	</div>
+      	<br class="clear">
+  	</div>
+</div>
+</body></html>

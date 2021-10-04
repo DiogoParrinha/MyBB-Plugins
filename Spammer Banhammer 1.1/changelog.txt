@@ -1,0 +1,2 @@
+1.1
+- Added Purge All feature that allows purging of all users matching a selected criteria

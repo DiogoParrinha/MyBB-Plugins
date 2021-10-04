@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- start: index -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<title>Readme - My Advertisements</title>
+<!-- start: headerinclude -->
+<link href="Readme_files/css.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<link type="text/css" rel="stylesheet" href="Readme_files/custom.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/global.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/css3.css">
+</head>
+<body>
+<!-- start: header -->
+<a name="top" id="top"></a>
+<div id="userbar">
+	<div class="wrapper">
+      	<div class="toplinks">
+        	<ul>
+              	<li id="forums"><a href="#description">Description</a></li>
+              	<li id="search"><a href="#install">Install</a></li>
+              	<li id="search"><a href="#upgrade">Upgrade</a></li>
+              	<li id="search"><a href="#support">Support</a></li>
+          	</ul>
+      	</div>
+  	</div>
+</div>
+<div class="header">
+    <div class="logo">
+        <div class="wrapper">
+            <a href="#"><img src="Readme_files/logo.png" alt="Forums" title="Forums"></a>
+          	<br class="clear">
+        </div>
+    </div>
+</div>
+<br />
+<div id="container">
+	<div id="content">
+		<div class="wrapper">
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="description">Description</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p><strong>My Advertisements</strong></p>
+						<p>This plugin adds a powerful advertisements manager to your forum.
+
+						<p>Features:
+						<ul>
+							<li>Admins can create zones.
+							<li>Admins can create advertisements and assign them to zones.
+							<li>Admins can set an expiration date for advertisements and exempt groups as well.
+							<li>Clicks are logged via AJAX so the user doesn't notice that the advertisement has been clicked.
+							<li>Advertisement views are logged.
+							<li>Each zone has its own code which you can get by clicking Get Code in the Zones page.
+							<li>A certain uid can be informed via PM once an ad expires
+							<li>Zone codes can be used anywhere: posts, header, footer, index, etc
+						</ul>
+						<p><strong>Note</strong>
+						<p>My Advertisements doesn't perform template edits when you add a new zone.
+						<p>Template edits must be done by yourself.
+						<p>However, My Advertisements performs 4 edits on activation:
+						<ul>
+							<li>Header</li>
+							<li>Footer</li>
+							<li>Postbit</li>
+							<li>Postbit Classic</li>
+						</ul>
+						<p>There is the possibility of clicks not being logged in certain occasions, therefore you should see the click stats as a certainty.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="install">Install</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>Upload contents of the Upload folder to the root of your MyBB installation.</p>
+						<p>Go to Admin CP -> Configuration -> Plugins and Activate "My Advertisements"</p>
+						<p>Then go to Settings -> My Advertisements and change anything you need.</p>
+						<p>&nbsp;</p>
+						<p>Note 1: Make sure you ACTIVATE the My Advertisements task from the Admin CP too! - IMPORTANT -</p>
+						<p>&nbsp;</p>
+						<p>Note 2: please read comments above the following line found at the top of /inc/plugins/myadvertisements.php</p>
+						<p>define("MYADS_DIF_POST", 0);</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="upgrade">Upgrade</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p><strong>From 2.2/2.3/2.3.1/2.3.2/2.3.3 to 2.3.4:</strong></p>
+						<ul>
+							<li>Upload contents of the Upload folder to the root of your MyBB installation.</li>
+						</ul>
+						<br />
+						<p><strong>From 2.1/2.1.1/2.1.2 to 2.3.3:</strong></p>
+						<ul>
+							<li>Upload contents of the Upload folder to the root of your MyBB installation.</li>
+							<li>Upload the upgrade.php file to the root of your MyBB installation and run it from your browser.</li>
+							<li>Delete it afterwards.</li>
+						</ul>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="support">Support</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>This plugin is NOT maintained and NO support is officially given by the author. Use at your own RISK.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<br />
+<div id="footer">
+	<div class="wrapper">
+    	<div class="copyright">
+          	Copyright © 2016 Diogo Parrinha<br />
+          	All rights reserved.<br />
+      	</div>
+      	<br class="clear">
+  	</div>
+</div>
+</body></html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- start: index -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<title>Readme - MySubscriptions</title>
+<!-- start: headerinclude -->
+<link href="Readme_files/css.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<link type="text/css" rel="stylesheet" href="Readme_files/custom.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/global.css">
+<link type="text/css" rel="stylesheet" href="Readme_files/css3.css">
+</head>
+<body>
+<!-- start: header -->
+<a name="top" id="top"></a>
+<div id="userbar">
+	<div class="wrapper">
+      	<div class="toplinks">
+        	<ul>
+              	<li id="forums"><a href="#description">Description</a></li>
+              	<li id="search"><a href="#install">Install</a></li>
+              	<li id="search"><a href="#upgrade">Upgrade</a></li>
+              	<li id="search"><a href="#instructions">Instructions</a></li>
+              	<li id="search"><a href="#support">Support</a></li>
+          	</ul>
+      	</div>
+  	</div>
+</div>
+<div class="header">
+    <div class="logo">
+        <div class="wrapper">
+            <a href="#"><img src="Readme_files/logo.png" alt="Forums" title="Forums"></a>
+          	<br class="clear">
+        </div>
+    </div>
+</div>
+<br />
+<div id="container">
+	<div id="content">
+		<div class="wrapper">
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="description">Description</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<h2>MySubscriptions</h2>
+						<p>MySubscriptions allows board administrators to setup PayPal and CoinPayments subscriptions on their <a href="http://mybb.com" target="_blank"/>MyBB</a> forum.</p>
+						<p>Features:
+						<ul>
+						<li>Support for PayPal and CoinPayments.</li>
+						<li>Multiple subscription plans.</li>
+						<li>Option to create a plan which adds a usergroup to users's additional groups list when subscribing (instead of changing the primary group) - this allows a user to have multiple subscriptions on the site.</li>
+						<li>Subscriptions logs (subscription creation, subscription cancellation, subscription expiration).</li>
+						<li>Automatically removes someone from a usergroup they have subscribed once the subscription has expired.</li>
+						<li>You can choose one-off payments instead of recurring subscriptions (which are only available for PayPal).</li>
+						<li>Recurring payments stats page on the Admin CP which shows a list of subscribers to recurring subscriptions in a certain period of time plus total subscribers for each plan and total income.</li>
+						<li>One-off payments stats page on the Admin CP which shows a list of subscribers to one-off subscriptions in a certain period of time plus total subscribers for each plan and total income.</li>
+						<li>It is possible to set, for each plan, which usergroups can see it and therefore subscribe to it.</li>
+						<li>Each plan can have a custom PM.</li>
+						<li>Plans can be enabled or disabled at any time.</li>
+						<li>Slotted subscriptions: maximum subscribers per plan with the possibility of having subscriptions reserved for a limited time after they expire.</li>
+						</ul>
+						</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="install">Install</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>Simply upload the contents of the &quot;Upload&quot; folder to the root of your MyBB installation.</p>
+						<p>Make sure to edit the settings for MySubscriptions, it is required to enter a PayPal email (business or premier account) and select the currency and/or enter filling in the CoinPayments settings.</p>
+						<p>The PayPal account must have Instant Paypal Notifcations enabled - please refer to the PayPal documents for more information on this matter.</p>
+						<p>Enable the MySubscriptions task from ACP -> Tools & Maintenance -> Task Manager.</p>
+						<p>To enable CoinPayments you must edit the /mysubscriptions_coinpayments.php file and at the top, modify the $cp_ipn_secret variable with your IPN secret.</p>
+						<br />
+						<p>It is important to note that your server must have a libCurl > 7.34, otherwise TLS 1.2 may not be available and PayPal requires it!</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="upgrade">Upgrade</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p><strong>Upgrading from 2.3/2.3.1/2.3.2/2.3.3/2.3.4/2.3.5 to 2.3.6:</strong></p>
+						<p>Overwrite all files.</p>
+						<p>Done!</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="instructions">Instructions</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>To create a new subscription plan go to ACP -> Users & Groups -> MySubscriptions.</p>
+						<p>When creating a new plan you have the ability to choose whether or not the plan should be a PayPal subscription or a One-off payment.</p>
+						<p>PayPal subscriptions are automatically recurring and need to be cancelled manually either by you or by the subscriber.</p>
+						<p>One-off payments will not renew.</p>
+						<p>To use the CoinPayments payment processor, the plan must be set to One-off, otherwise the button will not show up.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<br />
+			<table class="tborder" cellpadding="5" cellspacing="0" border="0">
+				<thead>
+				<tr>
+				<td class="thead">
+				<div><strong><a name="support">Support</a></strong><br /><div class="smalltext"></div></div>
+				</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="trow2">
+						<p>This plugin is NOT maintained and NO support is officially given by the author. Use at your own RISK.</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<br />
+<div id="footer">
+	<div class="wrapper">
+    	<div class="copyright">
+          	Copyright © 2019 Diogo Parrinha<br />
+          	All rights reserved.<br />
+      	</div>
+      	<br class="clear">
+  	</div>
+</div>
+</body></html>

@@ -1,0 +1,317 @@
+#userbar {
+	background: #2c3e50;
+	height: 40px;
+	min-width: 980px;
+	width: 100%;
+}
+
+#userbar .wrapper{
+  	width: 90%;
+  	min-width: 980px;
+  	text-align: left;
+  	color: #ededed;
+  	font-size: 12px;
+  	line-height: 250%;
+}
+
+#userbar .wrapper .dropmenu{
+  	display: inline-block;
+  	padding: 5px 10px;
+  	min-width: 260px;
+  	text-shadow: 0 -1px 0 #1e2b39;
+}
+
+#userbar .wrapper .dropmenu:hover{
+  	background: #fff;
+  	color: #979797;
+  	text-shadow: none;
+}
+
+#userbar .wrapper .dropmenu .user_avatar img{
+  	width: 26px;
+  	height: 26px;
+  	border: 2px solid #1d2c3b;
+  	float: left;
+  	margin-right: 10px;
+}
+
+#userbar .wrapper .dropmenu .dropcontent{
+  	display: none;
+  	position: absolute;
+  	background: #fff;
+  	top: 40px;
+  	padding: 10px;
+  	margin-left: -10px;
+  	width: 280px;
+ 	-webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+	box-shadow:         4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+#userbar .wrapper .dropmenu .dropcontent hr.dropsep{
+  	color: #efefef;
+  	background: #efefef;
+  	height: 1px;
+}
+
+#userbar .wrapper .dropmenu .dropcontent .fa-clock-o{
+  	margin: 0 4px;
+}
+
+#userbar .wrapper .dropmenu:hover .dropcontent{
+  	display: block;
+}
+
+#userbar .wrapper .dropmenu .dropcontent .left,
+#userbar .wrapper .dropmenu .dropcontent .right{
+  	width: calc(50% - 8px);
+  	text-align: left;
+  	padding: 4px;
+}
+
+#userbar .wrapper .dropmenu .dropcontent .left{
+  	float: left;
+}
+
+#userbar .wrapper .dropmenu .dropcontent .right{
+  	float: right;
+}
+
+#userbar .wrapper .dropmenu .dropcontent ul{
+  	list-style-type: none;
+  	padding: 0;
+  	margin: 0;
+}
+
+#userbar .wrapper .dropmenu .dropcontent ul li a:link,
+#userbar .wrapper .dropmenu .dropcontent ul li a:visited{
+  	color: #979797;
+  	display: block;
+  	font-size: 12px;
+}
+
+#userbar .wrapper .dropmenu .dropcontent ul li i{
+	display: inline-block;
+  	width: 26px;
+  	text-align: center;
+  	padding: 7px 0;
+  	margin-right: 4px;
+}
+
+#userbar .wrapper .dropmenu .dropcontent .left ul li a:hover{
+  	color: #2980b9;
+  	text-decoration: none;
+}
+
+#userbar .wrapper .dropmenu .dropcontent .right ul li a:hover{
+  	color: #27ae60;
+  	text-decoration: none;
+}
+
+#userbar .wrapper .dropmenu .dropcontent .left ul li a:hover i{
+  	background: #2980b9;
+  	color: #fff;
+}
+
+#userbar .wrapper .dropmenu .dropcontent .right ul li a:hover i{
+  	background: #2ecc71;
+  	color: #fff;
+}
+
+#userbar .wrapper .toplinks{
+  	float: right;
+}
+
+#userbar .wrapper .toplinks ul{
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+}
+
+#userbar .wrapper .toplinks ul li{
+  	display: inline-block;
+  	float: left;
+  	font-size: 12px;
+}
+
+#userbar .wrapper .toplinks ul li i{
+  	margin-right: 2px;
+}
+
+#userbar .wrapper .toplinks ul li a:link,
+#userbar .wrapper .toplinks ul li a:visited{
+  	display: block;
+  	color: #ededed;
+  	padding: 5px 12px 3px 12px;
+  	border-bottom: 2px solid transparent;
+  	text-shadow: 0 -1px 0 #1e2b39;
+}
+
+#userbar .wrapper .toplinks ul li a:hover,
+#userbar .wrapper .toplinks ul li a.active{
+  	background: #e74c3c;
+  	border-bottom: 2px solid #c0392b;
+  	text-shadow: 0 -1px 0 #c0392b;
+  	text-decoration: none;
+}
+
+#userbar .wrapper .toplinks ul li a.active:hover{
+  	background: #2980b9;
+  	border-bottom: 2px solid #2980b9;
+  	text-shadow: 0 -1px 0 #1e2b39;
+}
+
+#userbar .login:link,
+#userbar .login:visited{
+  	color: #3498db;
+}
+
+#userbar .register:link,
+#userbar .register:visited{
+	color: #1abc9c;
+}
+
+.header{
+  	background: #2980b9;
+  	min-width: 980px;
+}
+
+.header .logo{
+  	width: 90%;
+  	min-width: 980px;
+  	margin: 0 auto;
+  	text-align: left;
+  	padding: 20px 0;
+}
+
+.header .logo .wrapper .searchbox{
+  	float: right;
+}
+
+.header .logo .wrapper .searchbox input[type="text"]{
+  	padding: 15px 10px 15px 30px;
+  	background-color: #efefef;
+  	background-image: url(../../../mp/images/searchbox.png);
+  	background-repeat: no-repeat;
+  	background-position: top 16px left 12px;
+  	border: 1px solid #2c3e50;
+     -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+  	width: 140px;
+  	margin-top: 8px;
+  	-webkit-box-shadow: 0px 1px 0px 0px #3fa3e5;
+    -moz-box-shadow:    0px 1px 0px 0px #3fa3e5;
+    box-shadow:         0px 1px 0px 0px #3fa3e5;
+  	color: #828282;
+   	transition: all 0.5s ease;
+}
+
+.header .logo .wrapper .searchbox input[type="text"]:focus{
+  	outline: 0;
+  	background-color: #fff;
+  	width: 240px;
+  	transition: all 0.5s ease;
+}
+
+.primary_blue{
+  	color: #2980b9;
+}
+
+.extrapadding{
+  	padding-left: 10px;
+  	padding-right: 10px;
+}
+
+#bottomlinks{
+	background: #2c3e50;
+  	min-width: 980px;
+}
+
+#bottomlinks .wrapper{
+  	width: 90%;
+  	min-width: 980px;
+  	margin: 0 auto;
+  	padding: 10px 0;
+  	color: #828282;
+  	text-align: left;
+}
+
+#bottomlinks .wrapper a:link,
+#bottomlinks .wrapper a:visited,
+#bottomlinks .wrapper a:visited,
+#bottomlinks .wrapper a:hover{
+  	color: #a3a2a2;
+}
+
+.forum_indications{
+  	margin: 20px 0;
+}
+
+.forum_indications table{
+  	width: 90%;
+  	min-width: 800px;
+  	margin: 0 auto;
+}
+
+.forum_indications table tr td{
+  	width: 25%;
+  	vertical-align: middle;
+  	text-align: center;
+}
+
+.forum_indications table tr td.right{
+  	border-right: 1px solid #efefef!important;
+}
+
+.forum_indications table tr td img{
+  	vertical-align: middle;
+  	margin-top: -1px;
+  	margin-right: 3px;
+}
+
+.forumstat i{
+  	font-size: 32px;
+  	margin: 0 4px;
+}
+
+.tcat .expcolimage{
+  	margin-top: -8px;
+}
+
+.userpost{
+	padding: 10px;
+  	border: 1px solid #ccc;
+  	margin-top: 15px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+  	background: #f8f8f8;
+}
+
+.userpost .post_date{
+  	display: inline-block;
+  	font-size: 11px;
+  	margin-bottom: 10px;
+}
+
+.author_avatar img{
+  	display: inline-block;
+  	float: left;
+  	padding: 4px;
+  	background: #fff;
+  	border: 1px solid #efefef;
+  	margin-right: 10px;
+  	height: 78px;
+  	width: 78px;
+}
+
+.author_wrapper{
+  	height: 88px;
+}
+
+a.compress .fa,
+a.expand .fa{
+    outline: 1px solid transparent;
+}
+		

@@ -1,0 +1,17 @@
+v2.0
+* Re-coded plugin (all known bugs fixed included)
+* Changed licence.
+
+ v1.4
+* Fixed problem in showing the winner ticket as well as winner user.
+
+ v1.3
+* Winner no longer gets points on page shutdown but when the function to give points is called.
+
+ v1.2
+* Fixed some bugs.
+* Winner would be incorrect in some cases.
+
+ v1.1
+* Fixed bug in statistics.
+* Fixed bug in giving points to winner.
