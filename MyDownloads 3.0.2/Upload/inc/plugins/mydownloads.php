@@ -31,9 +31,6 @@ else
 	$plugins->add_hook("member_profile_end", "mydownloads_profile");
 
 	$plugins->add_hook('global_intermediate', 'mydownloads_header');
-
-	if (class_exists('MybbStuff_MyAlerts_AlertTypeManager'))
-		$plugins->add_hook('myalerts_load_lang', 'mydownloads_alerts_lang');
 }
 
 // cache templates
@@ -3727,59 +3724,6 @@ function mydownloads_getMime($url)
 	}
 }
 
-if (class_exists('MybbStuff_MyAlerts_AlertTypeManager')) {
-	/**
-	 * Alert formatter for my custom alert type.
-	 */
-	class MyCustomAlertFormmatter extends MybbStuff_MyAlerts_Formatter_AbstractFormatter
-	{
-		/**
-		 * Format an alert into it's output string to be used in both the main alerts listing page and the popup.
-		 *
-		 * @param MybbStuff_MyAlerts_Entity_Alert $alert The alert to format.
-		 *
-		 * @return string The formatted alert string.
-		 */
-		public function formatAlert(MybbStuff_MyAlerts_Entity_Alert $alert, array $outputAlert)
-		{
-			return $this->lang->sprintf(
-				$this->lang->mydownloads_new_comment,
-				$outputAlert['from_user'],
-				$outputAlert['object_id'],
-				$outputAlert['extra_details']['cid'],
-				$outputAlert['dateline']
-			);
-		}
-
-		/**
-		 * Init function called before running formatAlert(). Used to load language files and initialize other required
-		 * resources.
-		 *
-		 * @return void
-		 */
-		public function init()
-		{
-			if (!$this->lang->mydownloads_new_comment) {
-				$this->lang->load('mydownloads');
-			}
-		}
-
-		/**
-		 * Build a link to an alert's content so that the system can redirect to it.
-		 *
-		 * @param MybbStuff_MyAlerts_Entity_Alert $alert The alert to build the link for.
-		 *
-		 * @return string The built alert, preferably an absolute link.
-		 */
-		public function buildShowLink(MybbStuff_MyAlerts_Entity_Alert $alert)
-		{
-			global $mybb;
-			$extra = $alert->getExtraDetails();
-			return $mybb->settings['bburl'].'/mydownloads.php?action=view_down&did='.(int)$alert->getObjectId().'#cid'.(int)$extra['cid'];
-		}
-	}
-}
-
 function mydownloads_alerts_lang()
 {
 	global $lang;
@@ -3788,8 +3732,62 @@ function mydownloads_alerts_lang()
 
 function mydownloads_alerts_formatter()
 {
-	global $mybb, $lang;
-	if (class_exists('MybbStuff_MyAlerts_AlertFormatterManager')) {
+	global $mybb, $lang, $plugins;
+
+	if (class_exists('MybbStuff_MyAlerts_AlertFormatterManager') && class_exists('MybbStuff_MyAlerts_AlertTypeManager')) {
+		$plugins->add_hook('myalerts_load_lang', 'mydownloads_alerts_lang');
+
+		/**
+		 * Alert formatter for my custom alert type.
+		 */
+		class MyCustomAlertFormmatter extends MybbStuff_MyAlerts_Formatter_AbstractFormatter
+		{
+			/**
+			 * Format an alert into it's output string to be used in both the main alerts listing page and the popup.
+			 *
+			 * @param MybbStuff_MyAlerts_Entity_Alert $alert The alert to format.
+			 *
+			 * @return string The formatted alert string.
+			 */
+			public function formatAlert(MybbStuff_MyAlerts_Entity_Alert $alert, array $outputAlert)
+			{
+				return $this->lang->sprintf(
+					$this->lang->mydownloads_new_comment,
+					$outputAlert['from_user'],
+					$outputAlert['object_id'],
+					$outputAlert['extra_details']['cid'],
+					$outputAlert['dateline']
+				);
+			}
+
+			/**
+			 * Init function called before running formatAlert(). Used to load language files and initialize other required
+			 * resources.
+			 *
+			 * @return void
+			 */
+			public function init()
+			{
+				if (!$this->lang->mydownloads_new_comment) {
+					$this->lang->load('mydownloads');
+				}
+			}
+
+			/**
+			 * Build a link to an alert's content so that the system can redirect to it.
+			 *
+			 * @param MybbStuff_MyAlerts_Entity_Alert $alert The alert to build the link for.
+			 *
+			 * @return string The built alert, preferably an absolute link.
+			 */
+			public function buildShowLink(MybbStuff_MyAlerts_Entity_Alert $alert)
+			{
+				global $mybb;
+				$extra = $alert->getExtraDetails();
+				return $mybb->settings['bburl'].'/mydownloads.php?action=view_down&did='.(int)$alert->getObjectId().'#cid'.(int)$extra['cid'];
+			}
+		}
+
 		$lang->load("mydownloads");
 
 		$formatterManager = MybbStuff_MyAlerts_AlertFormatterManager::getInstance();
